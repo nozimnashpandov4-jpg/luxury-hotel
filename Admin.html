@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: gold;
+            padding: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #222;
+        }
+        th, td {
+            border: 1px solid gold;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+const password = "20070416";
+const userPass = prompt("Enter admin password:");
+
+if (userPass !== password) {
+    alert("Access Denied");
+    window.location.replace("./index.html");
+}
+</script>
+
+
+
+<h1>📊 Booking Dashboard</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Room</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Dates</th>
+            <th>Guests</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="booking-table"></tbody>
+</table>
+
+<script>
+const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+const table = document.getElementById("booking-table");
+
+bookings.forEach((b, index) => {
+    const row = `
+        <tr>
+            <td>${b.room}</td>
+            <td>${b.name} ${b.surname}</td>
+            <td>${b.phone}</td>
+            <td>${b.checkin} → ${b.checkout}</td>
+            <td>${b.guests}</td>
+            <td>$${b.totalPrice}</td>
+            <td><button onclick="deleteBooking(${index})">Delete</button></td>
+        </tr>
+    `;
+    table.innerHTML += row;
+});
+
+function deleteBooking(index) {
+    const ok = confirm("Are you sure you want to delete this booking?");
+
+    if (!ok) return;
+
+    let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+
+    bookings.splice(index, 1);
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>
