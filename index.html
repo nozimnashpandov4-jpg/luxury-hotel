@@ -316,6 +316,7 @@ html {
 
 <h2 id="about" data-key="about">About Us</h2>
 <p class="about-text reveal">
+data-key="about_text">
 Welcome to Luxury Hotel — your perfect place for comfort and relaxation.
 We offer world-class service, beautiful rooms, and unforgettable experience
 in the heart of Tashkent.
@@ -569,21 +570,24 @@ document.getElementById("secret-admin").addEventListener("click", () => {
 
     <script>
 const translations = {
-    uz: {
-        title: "Luxury Hotel",
-        welcome: "Mehmonxonamizga xush kelibsiz",
-        about: "Biz haqimizda"
-    },
-    en: {
-        title: "Luxury Hotel",
-        welcome: "Welcome to our hotel",
-        about: "About Us"
-    },
-    ru: {
-        title: "Роскошный Отель",
-        welcome: "Добро пожаловать в наш отель",
-        about: "О нас"
-    }
+  uz: {
+    title: "Luxury Hotel",
+    welcome: "Mehmonxonamizga xush kelibsiz",
+    about: "Biz haqimizda",
+    about_text: "Luxury Hotel — qulaylik va dam olish uchun eng zo‘r maskan."
+  },
+  en: {
+    title: "Luxury Hotel",
+    welcome: "Welcome to our hotel",
+    about: "About Us",
+    about_text: "Luxury Hotel — your perfect place for comfort and relaxation."
+  },
+  ru: {
+    title: "Роскошный Отель",
+    welcome: "Добро пожаловать в наш отель",
+    about: "О нас",
+    about_text: "Luxury Hotel — идеальное место для отдыха и комфорта."
+  }
 };
 
 function setLang(lang, btn) {
@@ -606,6 +610,7 @@ setLang(savedLang);
 </body>
 
 </html>
+
 
 
 
