@@ -586,7 +586,6 @@ const translations = {
     }
 };
 
-<script>
 function setLang(lang, btn) {
   document.querySelectorAll("[data-key]").forEach(el => {
     const key = el.getAttribute("data-key");
@@ -602,12 +601,12 @@ function setLang(lang, btn) {
 // sahifa ochilganda oxirgi tilni yuklash
 const savedLang = localStorage.getItem("lang") || "uz";
 setLang(savedLang);
-
 </script>
     
 </body>
 
 </html>
+
 
 
 
