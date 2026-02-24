@@ -261,10 +261,15 @@ html {
         <a href="#">Home</a>
         <a href="#rooms">Rooms</a>
         <a href="#contact">Contact</a>
+        <div class="lang-switch">
+    <button onclick="setLang('uz')">UZ</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+</div>
     </div>
 </div>
-<h1>Luxury Hotel</h1>
-<p>Welcome to our hotel</p>
+<h1 data-key="title">Luxury Hotel</h1>
+<p data-key="welcome">Welcome to our hotel</p>
 <div class="hero">
     <img src="https://picsum.photos/1000/500">
     <div class="hero-text">
@@ -286,7 +291,7 @@ html {
 <p id="booking-result"></p>
 
 
-<h2 id="about" class="reveal">About Us</h2>
+<h2 id="about" data-key="about">About Us</h2>
 <p class="about-text reveal">
 Welcome to Luxury Hotel — your perfect place for comfort and relaxation.
 We offer world-class service, beautiful rooms, and unforgettable experience
@@ -538,9 +543,43 @@ document.getElementById("secret-admin").addEventListener("click", () => {
     }, 3000);
 });
 </script>
+
+    <script>
+const translations = {
+    uz: {
+        title: "Luxury Hotel",
+        welcome: "Mehmonxonamizga xush kelibsiz",
+        about: "Biz haqimizda"
+    },
+    en: {
+        title: "Luxury Hotel",
+        welcome: "Welcome to our hotel",
+        about: "About Us"
+    },
+    ru: {
+        title: "Роскошный Отель",
+        welcome: "Добро пожаловать в наш отель",
+        about: "О нас"
+    }
+};
+
+function setLang(lang) {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.innerText = translations[lang][key];
+    });
+
+    localStorage.setItem("lang", lang);
+}
+
+// sahifa ochilganda oxirgi tilni yuklash
+const savedLang = localStorage.getItem("lang") || "uz";
+setLang(savedLang);
+</script>
     
 </body>
 
 </html>
+
 
 
