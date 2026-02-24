@@ -256,12 +256,11 @@ html {
 </head>
 <body>
 <div class="navbar">
-    <h2 class="logo">Luxury Hotel</h2>
+    <h2 class="logo" id="secret-admin">Luxury Hotel</h2>
     <div class="menu">
         <a href="#">Home</a>
         <a href="#rooms">Rooms</a>
         <a href="#contact">Contact</a>
-        <a href="Admin.html">Admin</a>
     </div>
 </div>
 <h1>Luxury Hotel</h1>
@@ -523,7 +522,25 @@ document.getElementById("checkin").addEventListener("change", function () {
 });
 
 </script>
+    
+    <script>
+let clickCount = 0;
+
+document.getElementById("secret-admin").addEventListener("click", () => {
+    clickCount++;
+
+    if (clickCount >= 3) {
+        window.location.href = "Admin.html";
+    }
+
+    setTimeout(() => {
+        clickCount = 0;
+    }, 3000);
+});
+</script>
+    
 </body>
 
 </html>
+
 
