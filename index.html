@@ -252,6 +252,28 @@ html {
     transform: translateY(0);
 }
 
+    .lang-toggle {
+  display: flex;
+  background: #222;
+  border-radius: 30px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: gold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lang-btn.active {
+  background: gold;
+  color: black;
+}    
     </style>
 </head>
 <body>
@@ -265,6 +287,11 @@ html {
     <button onclick="setLang('uz')">UZ</button>
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('ru')">RU</button>
+      <div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('uz', this)">UZ</button>
+  <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+  <button class="lang-btn" onclick="setLang('ru', this)">RU</button>
+</div>      
 </div>
     </div>
 </div>
@@ -563,23 +590,29 @@ const translations = {
     }
 };
 
-function setLang(lang) {
-    document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-        el.innerText = translations[lang][key];
-    });
+<script>
+function setLang(lang, btn) {
+  document.querySelectorAll("[data-key]").forEach(el => {
+    const key = el.getAttribute("data-key");
+    el.innerText = translations[lang][key];
+  });
 
-    localStorage.setItem("lang", lang);
+  localStorage.setItem("lang", lang);
+
+  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+  if (btn) btn.classList.add("active");
 }
 
 // sahifa ochilganda oxirgi tilni yuklash
 const savedLang = localStorage.getItem("lang") || "uz";
 setLang(savedLang);
+
 </script>
     
 </body>
 
 </html>
+
 
 
 
