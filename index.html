@@ -77,6 +77,12 @@
     padding: 15px;
     border-radius: 10px;
     color: gold;
+    transition: 0.3s;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
 }
 html {
     scroll-behavior: smooth;
@@ -127,18 +133,6 @@ html {
     border-radius: 10px;
     text-align: center;
 }
-.room {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 10px;
-    color: gold;
-    transition: 0.3s;
-}
-
-.room:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
-}
 .hero {
     position: relative;
     width: 90%;
@@ -160,18 +154,6 @@ html {
     background: rgba(0,0,0,0.4);
     padding: 20px;
     border-radius: 10px;
-}
-.room {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 10px;
-    color: gold;
-    transition: 0.3s;
-}
-
-.room:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
 }
 .about-text {
     width: 70%;
@@ -221,13 +203,11 @@ html {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
-/* hover animatsiya */
 .book-btn:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
 }
 
-/* yaltirash animatsiya */
 .book-btn {
     animation: glowPulse 2s infinite alternate;
 }
@@ -252,7 +232,7 @@ html {
     transform: translateY(0);
 }
 
-    .lang-toggle {
+.lang-toggle {
   display: flex;
   background: #222;
   border-radius: 30px;
@@ -273,7 +253,7 @@ html {
 .lang-btn.active {
   background: gold;
   color: black;
-}    
+}
     </style>
 </head>
 <body>
@@ -283,16 +263,17 @@ html {
         <a href="#">Home</a>
         <a href="#rooms">Rooms</a>
         <a href="#contact">Contact</a>
- <div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('uz', this)">UZ</button>
-  <button class="lang-btn" onclick="setLang('en', this)">EN</button>
-  <button class="lang-btn" onclick="setLang('ru', this)">RU</button>
-</div>
-</div>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('uz', this)">UZ</button>
+            <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+            <button class="lang-btn" onclick="setLang('ru', this)">RU</button>
+        </div>
     </div>
 </div>
+
 <h1 data-key="title">Luxury Hotel</h1>
 <p data-key="welcome">Welcome to our hotel</p>
+
 <div class="hero">
     <img src="https://picsum.photos/1000/500">
     <div class="hero-text">
@@ -300,8 +281,9 @@ html {
         <p>Enjoy your dream vacation</p>
     </div>
 </div>
-<br>
+
 <button class="book-btn" onclick="openPopup()">Book Now</button>
+
 <h2>Book Your Stay</h2>
 
 <div class="booking">
@@ -313,9 +295,7 @@ html {
 
 <p id="booking-result"></p>
 
-
 <h2 id="about" data-key="about">About Us</h2>
-<p class="about-text reveal">
 <p class="about-text" data-key="aboutText">
 Welcome to Luxury Hotel — your perfect place for comfort and relaxation.
 We offer world-class service, beautiful rooms, and unforgettable experience
@@ -324,33 +304,59 @@ in the heart of Tashkent.
 
 <h2 id="rooms" class="reveal">Our Rooms</h2>
 <div class="rooms reveal">
-    <div class="room" data-room="Standard Room">
-        <h3>Standard Room</h3>
-        <p>$100 per night</p>
-        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800" width="300">
-        <button onclick="selectRoom('Standard Room')">Select Room</button>
-    </div>
 
-    <div class="room" data-room="Deluxe Room">
-        <h3>Deluxe Room</h3>
-        <p>$200 per night</p>
-        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800" width="300">
-        <button onclick="selectRoom('Deluxe Room')">Select Room</button>
-    </div>
+<div class="room" data-room="Standard Room">
+    <h3>Standard Room</h3>
+    <p>$65 per night</p>
+    <p>
+        Comfortable and affordable room for short stays. 
+        The room includes a cozy bed, free Wi-Fi, air conditioning, and a private bathroom. 
+        Perfect for solo travelers or couples who want quality at a good price. 
+        Daily housekeeping keeps the room clean and fresh. 
+        Enjoy a peaceful atmosphere after a busy day in Tashkent. 
+        A smart choice for budget-friendly comfort.
+    </p>
+    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800" width="300">
+    <button onclick="selectRoom('Standard Room')">Select Room</button>
+</div>
 
-    <div class="room" data-room="Presidential Suite">
-        <h3>Presidential Suite</h3>
-        <p>$500 per night</p>
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" width="300">
-        <button onclick="selectRoom('Presidential Suite')">Select Room</button>
-    </div>
+<div class="room" data-room="Deluxe Room">
+    <h3>Deluxe Room</h3>
+    <p>$120 per night</p>
+    <p>
+        Spacious and elegant room designed for extra comfort. 
+        Features a large king-size bed, modern interior, and beautiful city views. 
+        Guests enjoy high-speed Wi-Fi, smart TV, minibar, and premium bathroom amenities. 
+        Ideal for couples or business travelers who want more space. 
+        The room offers a quiet and relaxing luxury atmosphere. 
+        A perfect balance between price and premium comfort.
+    </p>
+    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800" width="300">
+    <button onclick="selectRoom('Deluxe Room')">Select Room</button>
+</div>
+
+<div class="room" data-room="Presidential Suite">
+    <h3>Presidential Suite</h3>
+    <p>$280 per night</p>
+    <p>
+        Our most luxurious suite for guests who expect the best. 
+        Includes a separate living room, premium king bed, and panoramic city view. 
+        Enjoy VIP services, high-end furniture, smart TV, and luxury bathroom. 
+        Perfect for special occasions, business leaders, or long luxury stays. 
+        Every detail is designed for maximum comfort and prestige. 
+        Experience true five-star living in the heart of Tashkent.
+    </p>
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" width="300">
+    <button onclick="selectRoom('Presidential Suite')">Select Room</button>
+</div>
+
 </div>
 
 <h2 id="contact" class="reveal">Contact Us</h2>
 <div class="contact-box">
     <p>Phone: <a href="tel:+998978642005">+998 97 864 20 05</a></p>
     <p>Email: info@luxuryhotel.com</p>
-    <p> Location: Tashkent, Uzbekistan</p>
+    <p>Location: Tashkent, Uzbekistan</p>
 </div>
 
 <footer class="footer">
@@ -360,6 +366,7 @@ in the heart of Tashkent.
     <p>Location: Tashkent, Uzbekistan</p>
     <p>© 2026 Luxury Hotel. All rights reserved.</p>
 </footer>
+
 <div id="popup" class="popup">
     <div class="popup-content">
         <h2>Booking Request</h2>
@@ -375,15 +382,15 @@ in the heart of Tashkent.
         <p id="popup-result"></p>
     </div>
 </div>
+
 <script>
 let selectedRoom = "Not selected";
 
 const roomPrices = {
-    "Standard Room": 100,
-    "Deluxe Room": 200,
-    "Presidential Suite": 500
+    "Standard Room": 65,
+    "Deluxe Room": 120,
+    "Presidential Suite": 280
 };
-
 
 function openPopup() {
     document.getElementById("popup").style.display = "flex";
@@ -391,19 +398,11 @@ function openPopup() {
 
 function selectRoom(roomName) {
     selectedRoom = roomName;
-
-    // hamma roomlardan selected ni olib tashlash
     document.querySelectorAll(".room").forEach(room => {
         room.classList.remove("selected");
     });
-
-    // tanlangan roomga qo‘shish
-    const selectedDiv = document.querySelector(
-        `.room[data-room="${roomName}"]`
-    );
-    if (selectedDiv) {
-        selectedDiv.classList.add("selected");
-    }
+    const selectedDiv = document.querySelector(`.room[data-room="${roomName}"]`);
+    if (selectedDiv) selectedDiv.classList.add("selected");
 }
 
 function closePopup() {
@@ -416,28 +415,18 @@ function checkAvailability() {
     const guests = document.getElementById("guests").value;
     const result = document.getElementById("booking-result");
 
-    // bo‘sh maydon tekshiruvi
     if (!checkin || !checkout || !guests) {
         result.innerText = "Please fill all fields.";
         result.style.color = "orange";
         return;
     }
 
-    // sana tekshiruvi
     if (checkout <= checkin) {
         result.innerText = "Check-out must be after check-in.";
         result.style.color = "red";
         return;
     }
 
-    // guests tekshiruvi
-    if (guests < 1 || guests > 6) {
-        result.innerText = "Guests must be between 1 and 95.";
-        result.style.color = "orange";
-        return;
-    }
-
-    // success
     result.innerText = "✅ Rooms available! We are ready for your stay.";
     result.style.color = "lightgreen";
 }
@@ -445,130 +434,55 @@ function checkAvailability() {
 function calculateNights(checkin, checkout) {
     const inDate = new Date(checkin);
     const outDate = new Date(checkout);
-    const diffTime = outDate - inDate;
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return Math.ceil((outDate - inDate) / (1000 * 60 * 60 * 24));
 }
 
 function submitBooking() {
-    alert("submitBooking ishladi");
-    
-const name = document.getElementById("client-name").value;
+    const name = document.getElementById("client-name").value;
     const surname = document.getElementById("client-surname").value;
     const phone = document.getElementById("client-phone").value;
-
     const checkin = document.getElementById("checkin").value;
     const checkout = document.getElementById("checkout").value;
     const guests = document.getElementById("guests").value;
-
     const nights = calculateNights(checkin, checkout);
     const pricePerNight = roomPrices[selectedRoom] || 0;
     const totalPrice = nights * pricePerNight;
-
     const result = document.getElementById("popup-result");
 
-    // tekshiruv
-  if (!name || !surname || !phone || !checkin || !checkout || !guests) {
-    result.innerText = "Please fill all fields.";
-    result.style.color = "orange";
-    return;
+    if (!name || !surname || !phone || !checkin || !checkout || !guests) {
+        result.innerText = "Please fill all fields.";
+        result.style.color = "orange";
+        return;
+    }
+
+    if (selectedRoom === "Not selected") {
+        result.innerText = "Please select a room first.";
+        result.style.color = "orange";
+        return;
+    }
+
+    result.innerText = "✅ Booking sent successfully!";
+    result.style.color = "lightgreen";
 }
 
-if (selectedRoom === "Not selected") {
-    result.innerText = "Please select a room first.";
-    result.style.color = "orange";
-    return;
-}
-
-    const token = "7604358200:AAHQ7Xno1tRPTcMrE42QxkRaRmexDb2FurM";
-    const chatId = "1490543344";
-
-    const text =
-        "🏨 NEW BOOKING\n\n" +
-        "🛏 Room: " + selectedRoom + "\n" +
-        "👤 Name: " + name + " " + surname + "\n" +
-        "📞 Phone: " + phone + "\n\n" +
-        "📅 Check-in: " + checkin + "\n" +
-        "📅 Check-out: " + checkout + "\n" +
-        "🌙 Nights: " + nights + "\n" +
-        "👥 Guests: " + guests + "\n" +
-        "💰 Total Price: $" + totalPrice;
-
-    result.innerText = "⏳ Sending request...";
-    result.style.color = "gold";
-
-// bookingni localStorage ga saqlash (DEBUG)
-const bookingData = {
-    room: selectedRoom,
-    name: name,
-    surname: surname,
-    phone: phone,
-    checkin: checkin,
-    checkout: checkout,
-    guests: guests,
-    totalPrice: totalPrice
-};
-
-console.log("SAQLANAYAPTI:", bookingData);
-
-let bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-bookings.push(bookingData);
-localStorage.setItem("bookings", JSON.stringify(bookings));
-
-console.log("LOCALSTORAGE:", localStorage.getItem("bookings"));
-
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: text
-        })
-    });
-
-    setTimeout(() => {
-        result.innerText = "✅ Booking sent successfully!";
-        result.style.color = "lightgreen";
-    }, 1000);
-}
-
-window.addEventListener("scroll", () => {
-    document.querySelectorAll(".reveal").forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            el.classList.add("active");
-        }
-    });
-});
-
-// bugungi sanani minimal qilish
 const today = new Date().toISOString().split("T")[0];
 document.getElementById("checkin").setAttribute("min", today);
 document.getElementById("checkout").setAttribute("min", today);
 document.getElementById("checkin").addEventListener("change", function () {
     document.getElementById("checkout").setAttribute("min", this.value);
 });
-
 </script>
-    
-    <script>
-let clickCount = 0;
 
+<script>
+let clickCount = 0;
 document.getElementById("secret-admin").addEventListener("click", () => {
     clickCount++;
-
-    if (clickCount >= 3) {
-        window.location.href = "Admin.html";
-    }
-
-    setTimeout(() => {
-        clickCount = 0;
-    }, 3000);
+    if (clickCount >= 3) window.location.href = "Admin.html";
+    setTimeout(() => clickCount = 0, 3000);
 });
 </script>
 
-    <script>
+<script>
 const translations = {
     uz: {
         title: "Luxury Hotel",
@@ -597,19 +511,17 @@ function setLang(lang, btn) {
   });
 
   localStorage.setItem("lang", lang);
-
   document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
   if (btn) btn.classList.add("active");
 }
 
-// sahifa ochilganda oxirgi tilni yuklash
 const savedLang = localStorage.getItem("lang") || "uz";
 setLang(savedLang);
 </script>
-    
-</body>
 
+</body>
 </html>
+
 
 
 
