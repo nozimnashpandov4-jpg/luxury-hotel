@@ -4,180 +4,35 @@
     <title>Luxury Hotel</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-.navbar {
-    background-color: #111;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.logo {
-    margin: 0;
-    color: gold;
-    font-family: 'Playfair Display', serif;
-}
-.menu a {
-    color: gold;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-.menu a:hover {
-    color: white;
-}
-body {
-    background-color: black;
-    color: gold;
-    text-align: center;
-    font-family: 'Inter', Arial, sans-serif;
-}
-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    background: gold;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-button:hover {
-    background: darkorange;
-}
-img {
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.booking {
-    margin-top: 20px;
-}
-.booking input {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
-}
-.rooms {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-.room {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 10px;
-    color: gold;
-    transition: 0.3s;
-    max-width: 320px;
-}
-.room:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
-}
-html {
-    scroll-behavior: smooth;
-}
-.footer {
-    background-color: #111;
-    color: gold;
-    text-align: center;
-    padding: 30px;
-    margin-top: 40px;
-}
-.popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-.popup-content {
-    background: #111;
-    color: gold;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-}
-.popup-content input {
-    display: block;
-    width: 90%;
-    margin: 8px auto;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-}
-.hero {
-    position: relative;
-    width: 90%;
-    margin: auto;
-}
-.hero img {
-    width: 100%;
-    border-radius: 10px;
-}
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: gold;
-    text-align: center;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
-    border-radius: 10px;
-}
-.about-text {
-    width: 70%;
-    margin: 10px auto 30px;
-    line-height: 1.6;
-}
-.room.selected {
-    border: 3px solid gold;
-    box-shadow: 0 0 20px gold;
-}
-.book-btn {
-    padding: 16px 40px;
-    font-size: 20px;
-    background: linear-gradient(45deg, gold, orange);
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 25px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-}
-.book-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
-}
-.lang-toggle {
-  display: flex;
-  background: #222;
-  border-radius: 30px;
-  padding: 4px;
-  gap: 4px;
-}
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: gold;
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.lang-btn.active {
-  background: gold;
-  color: black;
-}
+/* CSS stillari o'zgarishsiz qoldi */
+.navbar { background-color: #111; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+.logo { margin: 0; color: gold; font-family: 'Playfair Display', serif; }
+.menu a { color: gold; text-decoration: none; margin-left: 20px; font-weight: bold; }
+.menu a:hover { color: white; }
+body { background-color: black; color: gold; text-align: center; font-family: 'Inter', Arial, sans-serif; }
+button { padding: 15px 30px; font-size: 18px; background: gold; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+button:hover { background: darkorange; }
+img { border-radius: 10px; margin-top: 20px; }
+.booking { margin-top: 20px; }
+.booking input { padding: 10px; margin: 5px; border-radius: 5px; border: none; }
+.rooms { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+.room { background-color: #222; padding: 15px; border-radius: 10px; color: gold; transition: 0.3s; max-width: 320px; }
+.room:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(255,215,0,0.3); }
+html { scroll-behavior: smooth; }
+.footer { background-color: #111; color: gold; text-align: center; padding: 30px; margin-top: 40px; }
+.popup { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
+.popup-content { background: #111; color: gold; padding: 30px; border-radius: 10px; text-align: center; }
+.popup-content input { display: block; width: 90%; margin: 8px auto; padding: 10px; border-radius: 6px; border: none; }
+.hero { position: relative; width: 90%; margin: auto; }
+.hero img { width: 100%; border-radius: 10px; }
+.hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: gold; text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px; }
+.about-text { width: 70%; margin: 10px auto 30px; line-height: 1.6; }
+.room.selected { border: 3px solid gold; box-shadow: 0 0 20px gold; }
+.book-btn { padding: 16px 40px; font-size: 20px; background: linear-gradient(45deg, gold, orange); color: black; border: none; border-radius: 8px; cursor: pointer; margin-top: 25px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+.book-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.9); }
+.lang-toggle { display: flex; background: #222; border-radius: 30px; padding: 4px; gap: 4px; }
+.lang-btn { background: transparent; border: none; color: gold; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+.lang-btn.active { background: gold; color: black; }
     </style>
 </head>
 <body>
@@ -185,9 +40,9 @@ html {
 <div class="navbar">
     <h2 class="logo" id="secret-admin">Luxury Hotel</h2>
     <div class="menu">
-        <a href="#">Home</a>
-        <a href="#rooms">Rooms</a>
-        <a href="#contact">Contact</a>
+        <a href="#" data-key="navHome">Home</a>
+        <a href="#rooms" data-key="navRooms">Rooms</a>
+        <a href="#contact" data-key="navContact">Contact</a>
         <div class="lang-toggle">
             <button class="lang-btn active" onclick="setLang('uz', this)">UZ</button>
             <button class="lang-btn" onclick="setLang('en', this)">EN</button>
@@ -202,20 +57,20 @@ html {
 <div class="hero">
     <img src="https://picsum.photos/1000/500">
     <div class="hero-text">
-        <h1>Luxury Experience</h1>
-        <p>Enjoy your dream vacation</p>
+        <h1 data-key="heroTitle">Luxury Experience</h1>
+        <p data-key="heroSub">Enjoy your dream vacation</p>
     </div>
 </div>
 
-<button class="book-btn" onclick="openPopup()">Book Now</button>
+<button class="book-btn" onclick="openPopup()" data-key="bookNow">Book Now</button>
 
-<h2>Book Your Stay</h2>
+<h2 data-key="bookStay">Book Your Stay</h2>
 
 <div class="booking">
     <input type="date" id="checkin">
     <input type="date" id="checkout">
     <input type="number" id="guests" placeholder="Guests" min="1" max="6">
-    <button onclick="checkAvailability()">Check Availability</button>
+    <button onclick="checkAvailability()" data-key="checkBtn">Check Availability</button>
 </div>
 
 <p id="booking-result"></p>
@@ -227,76 +82,55 @@ We offer world-class service, beautiful rooms, and unforgettable experience
 in the heart of Tashkent.
 </p>
 
-<h2 id="rooms">Our Rooms</h2>
+<h2 id="rooms" data-key="roomsTitle">Our Rooms</h2>
 <div class="rooms">
 
 <div class="room" data-room="Standard Room">
-    <h3>Standard Room</h3>
-    <p>$65 per night</p>
-    <p>
-        Comfortable and affordable room for short stays. 
-        Includes a cozy bed, free Wi-Fi, air conditioning, and private bathroom. 
-        Ideal for solo travelers or couples. 
-        Daily housekeeping keeps everything fresh. 
-        Quiet atmosphere for relaxing after a busy day. 
-        Smart choice for budget comfort.
-    </p>
+    <h3 data-key="room1Name">Standard Room</h3>
+    <p data-key="room1Price">$65 per night</p>
+    <p data-key="room1Desc">Comfortable and affordable room for short stays. Includes a cozy bed, free Wi-Fi, air conditioning, and private bathroom.</p>
     <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800" width="300">
-    <button onclick="selectRoom('Standard Room')">Select Room</button>
+    <button onclick="selectRoom('Standard Room')" data-key="selectBtn">Select Room</button>
 </div>
 
 <div class="room" data-room="Deluxe Room">
-    <h3>Deluxe Room</h3>
-    <p>$120 per night</p>
-    <p>
-        Spacious and elegant room for extra comfort. 
-        Features a king-size bed and modern interior. 
-        Includes high-speed Wi-Fi, smart TV, and minibar. 
-        Perfect for couples or business travelers. 
-        Quiet premium atmosphere. 
-        Excellent balance of price and luxury.
-    </p>
+    <h3 data-key="room2Name">Deluxe Room</h3>
+    <p data-key="room2Price">$120 per night</p>
+    <p data-key="room2Desc">Spacious and elegant room for extra comfort. Features a king-size bed and modern interior. Includes high-speed Wi-Fi.</p>
     <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800" width="300">
-    <button onclick="selectRoom('Deluxe Room')">Select Room</button>
+    <button onclick="selectRoom('Deluxe Room')" data-key="selectBtn">Select Room</button>
 </div>
 
 <div class="room" data-room="Presidential Suite">
-    <h3>Presidential Suite</h3>
-    <p>$280 per night</p>
-    <p>
-        Our most luxurious suite for premium guests. 
-        Separate living room and panoramic city view. 
-        Includes VIP service and luxury bathroom. 
-        High-end furniture and smart entertainment system. 
-        Perfect for special occasions or executives. 
-        Experience true five-star comfort in Tashkent.
-    </p>
+    <h3 data-key="room3Name">Presidential Suite</h3>
+    <p data-key="room3Price">$280 per night</p>
+    <p data-key="room3Desc">Our most luxurious suite for premium guests. Separate living room and panoramic city view. Includes VIP service.</p>
     <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" width="300">
-    <button onclick="selectRoom('Presidential Suite')">Select Room</button>
+    <button onclick="selectRoom('Presidential Suite')" data-key="selectBtn">Select Room</button>
 </div>
 
 </div>
 
-<h2 id="contact">Contact Us</h2>
+<h2 id="contact" data-key="contactTitle">Contact Us</h2>
 <div class="contact-box">
-    <p>Phone: <a href="tel:+998978642005">+998 97 864 20 05</a></p>
+    <p><span data-key="phone">Phone</span>: <a href="tel:+998978642005">+998 97 864 20 05</a></p>
     <p>Email: info@luxuryhotel.com</p>
-    <p>Location: Tashkent, Uzbekistan</p>
+    <p><span data-key="location">Location</span>: Tashkent, Uzbekistan</p>
 </div>
 
 <footer class="footer">
-    <p>© 2026 Luxury Hotel. All rights reserved.</p>
+    <p>© 2026 Luxury Hotel. <span data-key="rights">All rights reserved.</span></p>
 </footer>
 
 <div id="popup" class="popup">
     <div class="popup-content">
-        <h2>Booking Request</h2>
+        <h2 data-key="popTitle">Booking Request</h2>
         <input type="text" id="client-name" placeholder="Your name">
         <input type="text" id="client-surname" placeholder="Your surname">
         <input type="tel" id="client-phone" placeholder="Phone number">
-        <button onclick="submitBooking()">Send Request</button>
+        <button onclick="submitBooking()" data-key="popSubmit">Send Request</button>
         <br><br>
-        <button onclick="closePopup()">Close</button>
+        <button onclick="closePopup()" data-key="popClose">Close</button>
         <p id="popup-result"></p>
     </div>
 </div>
@@ -310,114 +144,105 @@ const roomPrices = {
     "Presidential Suite": 280
 };
 
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
+function openPopup() { document.getElementById("popup").style.display = "flex"; }
+function closePopup() { document.getElementById("popup").style.display = "none"; }
 function selectRoom(roomName) {
     selectedRoom = roomName;
     document.querySelectorAll(".room").forEach(r => r.classList.remove("selected"));
     const el = document.querySelector(`.room[data-room="${roomName}"]`);
     if (el) el.classList.add("selected");
 }
+
 function checkAvailability() {
     const checkin = document.getElementById("checkin").value;
     const checkout = document.getElementById("checkout").value;
     const guests = document.getElementById("guests").value;
     const result = document.getElementById("booking-result");
+    const lang = localStorage.getItem("lang") || "uz";
 
     if (!checkin || !checkout || !guests) {
-        result.innerText = "Please fill all fields.";
+        result.innerText = lang === 'uz' ? "Iltimos, barcha maydonlarni to'ldiring." : lang === 'ru' ? "Пожалуйста, заполните все поля." : "Please fill all fields.";
         result.style.color = "orange";
-        return;
-    }
-    if (checkout <= checkin) {
-        result.innerText = "Check-out must be after check-in.";
-        result.style.color = "red";
         return;
     }
     result.innerText = "✅ Rooms available!";
     result.style.color = "lightgreen";
 }
+
 function calculateNights(checkin, checkout) {
     return Math.ceil((new Date(checkout) - new Date(checkin)) / 86400000);
 }
+
 function submitBooking() {
     const name = document.getElementById("client-name").value;
-    const surname = document.getElementById("client-surname").value;
-    const phone = document.getElementById("client-phone").value;
-    const checkin = document.getElementById("checkin").value;
-    const checkout = document.getElementById("checkout").value;
-    const guests = document.getElementById("guests").value;
-    const nights = calculateNights(checkin, checkout);
-    const totalPrice = nights * (roomPrices[selectedRoom] || 0);
     const result = document.getElementById("popup-result");
-
-    if (!name || !surname || !phone || !checkin || !checkout || !guests) {
-        result.innerText = "Please fill all fields.";
-        result.style.color = "orange";
+    if (!name || selectedRoom === "Not selected") {
+        result.innerText = "Error!";
         return;
     }
-    if (selectedRoom === "Not selected") {
-        result.innerText = "Please select a room first.";
-        result.style.color = "orange";
-        return;
-    }
-
-    result.innerText = "✅ Booking sent! Total: $" + totalPrice;
-    result.style.color = "lightgreen";
+    result.innerText = "✅ Sent!";
 }
-
-const today = new Date().toISOString().split("T")[0];
-document.getElementById("checkin").min = today;
-document.getElementById("checkout").min = today;
-document.getElementById("checkin").addEventListener("change", function () {
-    document.getElementById("checkout").min = this.value;
-});
-
-let clickCount = 0;
-document.getElementById("secret-admin").addEventListener("click", () => {
-    clickCount++;
-    if (clickCount >= 3) window.location.href = "Admin.html";
-    setTimeout(() => clickCount = 0, 3000);
-});
 
 const translations = {
     uz: {
-        title: "Luxury Hotel",
-        welcome: "Mehmonxonamizga xush kelibsiz",
-        about: "Biz haqimizda",
-        aboutText: "Luxury Hotel — qulaylik va dam olish uchun mukammal joy. Biz Toshkent markazida yuqori darajadagi xizmat va chiroyli xonalarni taklif qilamiz."
+        navHome: "Bosh sahifa", navRooms: "Xonalar", navContact: "Aloqa",
+        title: "Hashamatli Mehmonxona", welcome: "Mehmonxonamizga xush kelibsiz",
+        heroTitle: "Premium Dam Olish", heroSub: "Orzungizdagi ta'tilni o'tkazing",
+        bookNow: "Hozir band qilish", bookStay: "Joy band qilish", checkBtn: "Mavjudlikni tekshirish",
+        about: "Biz haqimizda", aboutText: "Luxury Hotel — qulaylik va dam olish uchun mukammal joy. Biz Toshkent markazida yuqori darajadagi xizmat va chiroyli xonalarni taklif qilamiz.",
+        roomsTitle: "Bizning Xonalar",
+        room1Name: "Standart Xona", room1Price: "Kechasiga $65", room1Desc: "Qisqa muddatli qolish uchun qulay va hamyonbop xona. Shinam karovat va bepul Wi-Fi mavjud.",
+        room2Name: "Deluks Xona", room2Price: "Kechasiga $120", room2Desc: "Qo'shimcha qulaylik uchun keng va oqlangan xona. Zamonaviy interyer va smart TV.",
+        room3Name: "Prezident Lyuks", room3Price: "Kechasiga $280", room3Desc: "Eng yuqori darajadagi mehmonlar uchun hashamatli xona. Panoramik manzara va VIP xizmat.",
+        selectBtn: "Xonani tanlash", contactTitle: "Biz bilan aloqa", phone: "Telefon", location: "Manzil", rights: "Barcha huquqlar himoyalangan.",
+        popTitle: "Band qilish so'rovi", popSubmit: "So'rovni yuborish", popClose: "Yopish"
     },
     en: {
-        title: "Luxury Hotel",
-        welcome: "Welcome to our hotel",
-        about: "About Us",
-        aboutText: "Welcome to Luxury Hotel — your perfect place for comfort and relaxation."
+        navHome: "Home", navRooms: "Rooms", navContact: "Contact",
+        title: "Luxury Hotel", welcome: "Welcome to our hotel",
+        heroTitle: "Luxury Experience", heroSub: "Enjoy your dream vacation",
+        bookNow: "Book Now", bookStay: "Book Your Stay", checkBtn: "Check Availability",
+        about: "About Us", aboutText: "Welcome to Luxury Hotel — your perfect place for comfort and relaxation in the heart of Tashkent.",
+        roomsTitle: "Our Rooms",
+        room1Name: "Standard Room", room1Price: "$65 per night", room1Desc: "Comfortable and affordable room for short stays. Includes a cozy bed and free Wi-Fi.",
+        room2Name: "Deluxe Room", room2Price: "$120 per night", room2Desc: "Spacious and elegant room for extra comfort. Features a king-size bed and modern interior.",
+        room3Name: "Presidential Suite", room3Price: "$280 per night", room3Desc: "Our most luxurious suite for premium guests. Panoramic city view and VIP service.",
+        selectBtn: "Select Room", contactTitle: "Contact Us", phone: "Phone", location: "Location", rights: "All rights reserved.",
+        popTitle: "Booking Request", popSubmit: "Send Request", popClose: "Close"
     },
     ru: {
-        title: "Роскошный Отель",
-        welcome: "Добро пожаловать в наш отель",
-        about: "О нас",
-        aboutText: "Luxury Hotel — идеальное место для отдыха и комфорта."
+        navHome: "Главная", navRooms: "Номера", navContact: "Контакты",
+        title: "Роскошный Отель", welcome: "Добро пожаловать в наш отель",
+        heroTitle: "Премиальный Отдых", heroSub: "Наслаждайтесь отдыхом мечты",
+        bookNow: "Забронировать", bookStay: "Бронирование", checkBtn: "Проверить наличие",
+        about: "О нас", aboutText: "Luxury Hotel — идеальное место для комфорта и отдыха. Мы предлагаем сервис мирового уровня в центре Ташкента.",
+        roomsTitle: "Наши Номера",
+        room1Name: "Стандартный Номер", room1Price: "$65 за ночь", room1Desc: "Уютный и доступный номер для краткосрочного пребывания. Включает кровать и Wi-Fi.",
+        room2Name: "Номер Делюкс", room2Price: "$120 за ночь", room2Desc: "Просторный и элегантный номер для повышенного комфорта. Современный интерьер.",
+        room3Name: "Президентский Люкс", room3Price: "$280 за ночь", room3Desc: "Наш самый роскошный номер для VIP гостей. Панорамный вид и VIP сервис.",
+        selectBtn: "Выбрать номер", contactTitle: "Контакты", phone: "Телефон", location: "Адрес", rights: "Все права защищены.",
+        popTitle: "Запрос на бронь", popSubmit: "Отправить запрос", popClose: "Закрыть"
     }
 };
+
 function setLang(lang, btn) {
-  document.querySelectorAll("[data-key]").forEach(el => {
-    const key = el.getAttribute("data-key");
-    if (translations[lang][key]) el.innerText = translations[lang][key];
-  });
-  localStorage.setItem("lang", lang);
-  document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
-  if (btn) btn.classList.add("active");
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) el.innerText = translations[lang][key];
+    });
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+    if (btn) btn.classList.add("active");
+    else {
+        document.querySelector(`.lang-btn[onclick*="'${lang}'"]`).classList.add("active");
+    }
 }
 setLang(localStorage.getItem("lang") || "uz");
 </script>
 
 </body>
 </html>
+
 
 
 
